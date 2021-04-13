@@ -1,0 +1,47 @@
+[
+  {
+    "isbn": "123456",
+    "bookName": "aaaaa",
+    "bookSubName": "bbbbbb",
+    "bookSeriesName": "ccccc",
+    "author": {
+      "authorName": "ahmet",
+      "authorDescription": "authorDescriptionaaaa"
+    } ,
+    "publisher": {
+      "publisherName": "mehmet",
+      "publisherDescription": "publisherDescriptionbbbb"
+    } ,
+    "bookDescription": "ssssssss"
+  },
+  {
+    "isbn": "123456",
+    "bookName": "aaaaa",
+    "bookSubName": "bbbbbb",
+    "bookSeriesName": "ccccc",
+    "author": {
+      "authorName": "ahmet",
+      "authorDescription": "authorDescriptionaaaa"
+    } ,
+    "publisher": {
+      "publisherName": "mehmet",
+      "publisherDescription": "publisherDescriptionbbbb"
+    } ,
+    "bookDescription": "ssssssss"
+  },
+  {
+    "isbn": "123456",
+    "bookName": "aaaaa",
+    "bookSubName": "bbbbbb",
+    "bookSeriesName": "ccccc",
+    "author": {
+      "authorName": "ahmet",
+      "authorDescription": "authorDescriptionaaaa"
+    } ,
+    "publisher": {
+      "publisherName": "mehmet",
+      "publisherDescription": "publisherDescriptionbbbb"
+    } ,
+    "bookDescription": "ssssssss"
+  }
+]
