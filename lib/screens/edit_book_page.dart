@@ -46,6 +46,7 @@ class _State extends State<EditBook> {
       }
       return p;
     }
+
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -172,6 +173,7 @@ class _State extends State<EditBook> {
                             );
                           }).toList(),
                           onChanged: (selected){
+
                             widget.comingBook.author=selected;
                           },
                         )
@@ -191,6 +193,7 @@ class _State extends State<EditBook> {
                           onChanged: (selected){
                             widget.comingBook.publisher=selected;
                           },
+
                         )
                     ),
                     Container(

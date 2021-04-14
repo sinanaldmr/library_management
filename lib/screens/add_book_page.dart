@@ -1,4 +1,4 @@
-import 'dart:html';
+//import 'dart:html';
 import 'package:flutter/material.dart';
 import 'package:library_management/BookServices/BookService.dart';
 import 'package:library_management/model/author.dart';
@@ -19,7 +19,6 @@ class AddBook extends StatefulWidget {
 
 class _State extends State<AddBook> {
   final formkey = GlobalKey<FormState>();
-
   Book sbook=new Book();
 
 
@@ -30,6 +29,7 @@ class _State extends State<AddBook> {
 
   @override
   Widget build(BuildContext context) {
+    var currentSelectedValue;
     sbook.author = new Author();
     sbook.publisher=new Publisher();
     return Scaffold(
@@ -145,7 +145,6 @@ class _State extends State<AddBook> {
                         margin:
                         EdgeInsets.only(top: 50.0, left: 30.0, right: 30.0),
                         child: DropdownButton(
-                          //value: widget.author.elementAt(0),
                           hint: Text("Select Author"),
                           items: widget.author.map((Author map) {
                             return new DropdownMenuItem<Author>(
@@ -154,15 +153,18 @@ class _State extends State<AddBook> {
                             );
                           }).toList(),
                           onChanged: (selected){
-                            sbook.author=selected;
+                            setState(() {
+                              sbook.author=selected;
+                              currentSelectedValue=selected;
+                            });
                           },
+                          isExpanded: true,
                         )
                     ),
                     Container(
                         margin:
                         EdgeInsets.only(top: 50.0, left: 30.0, right: 30.0),
                         child: DropdownButton(
-                          //value: widget.publisher.elementAt(0),
                           hint: Text("Select Publisher"),
                           items: widget.publisher.map((Publisher map) {
                             return new DropdownMenuItem<Publisher>(
@@ -173,6 +175,7 @@ class _State extends State<AddBook> {
                           onChanged: (selected){
                             sbook.publisher=selected;
                           },
+                          isExpanded: true,
                         )
                     ),
                     Container(
